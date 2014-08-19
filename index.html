@@ -131,6 +131,20 @@
 			addOrUpdateEndpoint(prompt('請輸入要新增的端點名稱', ''));
 		});
 
+		$('#user-button').on('click', function(){
+			$.ajax({
+				type: 'GET',
+				dataType: 'json',
+				url: api_base + '/user/' + $('#cuid').val(),
+				error: function(data){
+
+				},
+				success: function(data){
+					alert(data['count']);
+				}
+			})
+		});
+
 });
 </script>
 </head>
