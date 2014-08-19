@@ -127,6 +127,10 @@
 			master_key = localStorage['master_key'];
 		});
 
+		$('#add-endpoint').on('click', function(){
+			addOrUpdateEndpoint(prompt('請輸入要新增的端點名稱', ''));
+		});
+
 });
 </script>
 </head>
@@ -135,6 +139,7 @@
 
         <div class="masthead">
             <ul class="nav nav-pills pull-right">
+							<li><a href="#" id="add-endpoint">新增端點</a></li>
 							<li><a href="#" id="login-button">驗證碼設定</a></li>
             </ul>
             <h3 class="text-muted">開源社：大地計畫!</h3>
